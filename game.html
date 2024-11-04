@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+
+<body>
+    <div id="canvas-container" class="d-flex justify-content-center align-items-center mt-2">
+        <div id="win-popup" class="d-none flex-column popup position-absolute bg-dark p-5 rounded shadow">
+            <h1 class="display-2 text-white">You Win!</h1>
+            <div class="popup-buttons d-flex justify-content-center align-items-center mt-5">
+                <button class="btn btn-primary btn-lg d-flex rounded-circle mr-5"
+                    onclick="window.location.href='index.html'"><i class="bi bi-house"
+                        style="font-size: 30px; color: white;"></i>
+                </button>
+                <button class="btn btn-success btn-lg d-flex rounded-circle" onclick="restartGame()"
+                    class="btn btn-lg btn-success"><i class="bi bi-arrow-counterclockwise"
+                        style="font-size: 30px; color: white;"></i></button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-light bg-dark">
+        <a class="home-button" href="index.html">
+            <i class="bi bi-house" style="font-size: 30px; color: white;"></i>
+        </a>
+        <div class="d-flex flex-grow-1 justify-content-start align-items-center">
+            <h3 class="text-white ml-5 mt-2">Level: <span id="level-display"></span></h3>
+            <h3 class="text-white ml-5 mt-2">High Score: <span id="high-score-display"></span></h3>
+            <h3 class="text-white ml-5 mt-2">Timer: <span id="timer-display"></span></h3>
+        </div>
+        <button id="start-pause-resume-button" class="btn btn-success pl-3 pr-3 m-1 text-white"
+            onclick="startPauseResumeGame()"><span id="start-pause-resume">Start</span></button>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>
